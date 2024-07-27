@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: orange;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+nav ul li {
+  list-style: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  width: 45%;
+}
+
+ul li {
+  padding: 20px;
+}
+
+#navRight {
+  width: 28%;
+  display: flex;
+  justify-content: center;
+}
+
+.imgHolder {
+  width: 17%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgHolder img {
+  width: 50%;
+  height: 50%;
+}
+
+.imgHolder img:hover {
+  cursor: pointer;
+}
+
+.mainVideoHolder {
+  width: 100%;
+  height: 70vh;
+  padding-bottom: 3dvh;
+  display: flex;
+  justify-content: center;
+}
+
+.mainVideoHolder iframe {
+  width: 100%;
+  height: 100%;
+}
+#subContent {
+  display: flex;
+  justify-content: center;
+}
+
+.subContentLeft {
+  width: 50%;
+  border-right: 1px solid grey;
+  padding: 20px;
+}
+
+#animeTitle {
+  display: flex;
+}
+
+#animeTitle h3 {
+  color: orange;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#animeTitle h3:hover {
+  cursor: pointer;
+  color: white;
+}
+.subContentRight {
+  width: 30%;
+  padding: 15px;
+}
+
+.likeAndDislike {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.icon {
+  height: 20px;
+}
+
+.icon img {
+  height: 100%;
+}
+
+.likeAndDislike {
+  color: white;
+}
+
+.icon {
+  margin: 0px 5px;
+}
+
+#more {
+  display: none;
+}
+
+#showMore {
+  border: none;
+  background-color: black;
+}
+
+.comments {
+  padding: 2px;
+  margin: 10px 0px;
+  display: flex;
+}
+
+.iconContainer {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.iconContainer img {
+  border-radius: 50%;
+  padding: 10px;
+  width: 5vh;
+  height: 5vh;
+}
+
+.commentsRight {
+  flex-grow: 1;
+}
+
+#scroll-div {
+  height: 15vh;
+  overflow-y: scroll;
+}
+
+#showMoreFor {
+  border: none;
+  background: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.videoContainer {
+  display: flex;
+  margin: 10px;
+}
+.vidHolder {
+  width: 45%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.vidHolder iframe {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(0.6px);
+  filter: blur(0.6px);
+}
+.overLayPlayButton {
+  position: absolute;
+  z-index: 1;
+  height: 30%;
+  width: 30%;
+}
+.overLayPlayButton img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.overLayPlayButton img:hover {
+  transform: scale(1.5)
+}
+
+.vidDetails {
+  color: white;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1149px) {
+  .mainVideoHolder {
+    height: auto;
+  }
+
+  #subContent {
+    padding: 2dvh;
+  }
+
+  .subContentRight {
+    width: 40%;
+  }
+
+  .subContentLeft {
+    width: 60%;
+  }
+}
+
+.commentIcons {
+  display: flex;
+  color: white;
+}
+
+.iconShare {
+  display: flex;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.iconLike {
+  padding: 10px;
+  display: flex;
+}
+
+.iconShare img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  transition: 0.4s ease;
+}
+
+.iconShare img:hover {
+  cursor: pointer;
+}
+
+.iconLike img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  transition: 0.4s ease;
+}
+
+.iconLike img:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 935px) {
+  .mainVideoHolder {
+    height: auto;
+  }
+
+  .imgHolder img {
+    width: 30%;
+    height: 30%;
+    padding-bottom: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navRight {
+    width: 100%;
+  }
+  ul {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .iconContainer img {
+    width: 3vh;
+    height: 3vh;
+  }
+  #subContent {
+    padding: 0;
+  }
+  li {
+    font-size: 15px;
+  }
+
+  #subContent {
+    flex-direction: column-reverse;
+  }
+
+  .subContentRight {
+    width: 80%;
+  }
+
+  .subContentLeft {
+    width: 80%;
+  }
+
+  .imgHolder img {
+    width: 20%;
+    height: 20%;
+    padding-bottom: 15px;
+  }
+
+  #subContent {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subContentRight {
+    width: 80%;
+  }
+
+  .subContentLeft {
+    width: 80%;
+  }
+}
